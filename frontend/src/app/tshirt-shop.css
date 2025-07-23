@@ -1,0 +1,320 @@
+/* Camp Mamo T-Shirt Shop Styles */
+
+/* Main layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('/assets/background/2101.i518.013.S.m005.c12.icebergs northern lights.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Header styles */
+.app-header {
+  background: linear-gradient(to right, rgba(14, 165, 233, 0.9), rgba(3, 105, 161, 0.9));
+  color: white;
+  padding: 0.625rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(4px);
+}
+
+.header-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.title-highlight {
+  color: rgb(186, 230, 253);
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Carousel container */
+.carousel-container {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.carousel-button {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(14, 165, 233);
+  color: white;
+  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: rgb(2, 132, 199);
+}
+
+.carousel-button:active {
+  background-color: rgb(3, 105, 161);
+}
+
+.carousel-info {
+  color: white;
+  font-weight: 600;
+  padding: 0 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Shirt card styles */
+.shirt-card {
+  flex: 0 0 280px;
+  min-width: 0;
+  margin: 0 15px;
+  height: 16.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.25rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  opacity: 0.9;
+}
+
+/* Make the center card more prominent */
+.shirt-card.selected {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.shirt-card:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.95;
+}
+
+.shirt-card.selected {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  outline: 2px solid rgb(56, 189, 248);
+  outline-offset: 2px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.shirt-image-container {
+  width: 13rem;
+  height: 13rem; /* Reduced image container height */
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+  position: relative;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 0.25rem;
+}
+
+.shirt-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.shirt-id {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(14, 165, 233);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.shirt-name {
+  font-weight: 500;
+  font-size: 1.05rem; /* Slightly smaller font */
+  text-align: center;
+  color: rgb(7, 89, 133);
+  margin-bottom: 0.1rem;
+  line-height: 1.2;
+}
+
+.shirt-price {
+  font-size: 1rem;
+  color: rgb(2, 132, 199);
+  margin-top: 0;
+}
+
+/* Selected shirt details */
+.selected-shirt-details {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selected-shirt-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(7, 89, 133);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.selected-shirt-price {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: rgb(2, 132, 199);
+}
+
+/* Button styles */
+.wallet-button {
+  padding: 0.5rem 1.25rem;
+  background-color: white;
+  color: rgb(2, 132, 199);
+  border-radius: 9999px;
+  font-weight: 500;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.wallet-button:hover {
+  background-color: rgb(243, 244, 246);
+}
+
+.buy-button {
+  background-color: rgb(14, 165, 233);
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-left: auto;
+  margin-right: auto;
+  width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: rgb(2, 132, 199);
+}
+
+.buy-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.buy-button-disabled {
+  background-color: rgb(156, 163, 175);
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  opacity: 0.7;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 16rem;
+}
+
+/* Icon styling */
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Loading spinner */
+.spinner {
+  animation: spin 1s linear infinite;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Footer */
+.app-footer {
+  background-color: rgba(3, 105, 161, 0.8);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.footer-text {
+  color: rgb(186, 230, 253);
+}
