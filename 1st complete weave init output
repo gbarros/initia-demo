@@ -1,0 +1,46 @@
+root@e6fbe446b217:/data# weave init
+✓ Select the Initia L1 network you want to connect your rollup to > Testnet (initiation-2)
+✓ Select the Virtual Machine (VM) for your rollup > EVM
+✓ Using the latest Minievm version ... v1.1.7
+✓ Specify rollup chain ID ... demo01
+✓ Specify rollup gas denom ... GAB
+✓ Specify rollup node moniker ... operator
+✓ Specify OP bridge config: Submission Interval (format s, m or h - ex. 30s, 5m, 12h) ... 1m
+✓ Specify OP bridge config: Output Finalization Period (format s, m or h - ex. 30s, 5m, 12h) ... 168h
+✓ Would you like to enable oracle price feed from L1? > Enable
+✓ Select a setup method for the system keys > Import existing keys
+✓ Specify the mnemonic for the rollup operator ... *Mnemonic has been entered and is now hidden for security purposes.*
+✓ Specify the mnemonic for the bridge executor ... *Mnemonic has been entered and is now hidden for security purposes.*
+✓ Specify the mnemonic for the output submitter ... *Mnemonic has been entered and is now hidden for security purposes.*
+✓ Specify the mnemonic for the batch submitter ... *Mnemonic has been entered and is now hidden for security purposes.*
+✓ Specify the mnemonic for the challenger ... *Mnemonic has been entered and is now hidden for security purposes.*
+✓ Select system accounts funding option > Fill in an amount for each account manually
+✓ Specify the amount to fund the bridge executor on L1 (uinit) ... 1
+✓ Specify the amount to fund the output submitter on L1 (uinit) ... 1
+✓ Specify the amount to fund the batch submitter on Celestia Testnet (utia) ... 1
+✓ Specify the amount to fund the challenger on L1 (uinit) ... 1
+✓ Specify fee whitelist addresses ... None
+✓ Would you like to add the gas station account to genesis accounts? > Yes
+✓ Specify the genesis balance for the gas station account (GAB) ... 2000000000
+✓ Would you like to add genesis accounts? > Yes
+  List of extra Genesis Accounts (excluding OPinit bots)
+  init1ge6jjxy6u0meam6ulm92emakv349kme9h5a9dp    Initial Balance: 2000000000GAB
+✓ System keys have been successfully recovered.
+✓ Batch Submitter on Celestia funded via Gas Station, with Tx Hash > D23890FB8923751F016EFF5BE4F5C9B3C3426A6D3ABC842B62D4FFFAEF6A1DBA
+✓ System keys on Initia L1 funded via Gas Station, with Tx Hash > 14733DDE94D110B523089A6ACAB5882E5C9AFD778BED5EB59EFC9D8C613B4E43
+✓ New rollup has been launched. (More details about your rollup in /root/.minitia/artifacts/artifacts.json and /root/.minitia/artifacts/config.json)
+
+ Rollup Endpoints:
+• REST API: http://localhost:1317
+• RPC: http://localhost:26657
+• RPC-WS: ws://localhost:26657/websocket
+• gRPC: http://localhost:9090
+• JSON-RPC: http://localhost:8545
+• JSON-RPC-WS: ws://localhost:8546
+
+✨ Explore your new rollup here 🪄 (We already started the rollup app for you)
+https://scan.testnet.initia.xyz/custom-network/add/link?config=eyJ2bSI6ImV2bSIsImNoYWluSWQiOiJkZW1vMDEiLCJtaW5HYXNQcmljZSI6MCwiZGVub20iOiJHQUIiLCJsY2QiOiJodHRwOi8vbG9jYWxob3N0OjEzMTciLCJycGMiOiJodHRwOi8vbG9jYWxob3N0OjI2NjU3IiwianNvblJwYyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODU0NSJ9
+
+i Important
+Open this in Chrome is recommended because some browsers may not support localhost access from a different host, or edit your browser's settings to allow it if necessary.
+
