@@ -11,7 +11,7 @@ contract Deploy is Script {
 
         // The deployer of the script will become the initial owner
         // Address of the real IConnectOracle on the Initia network
-        address oracleAddress = 0xc47ef2D751f64bC3FADc7dE3027fE02C94122056;
+        address oracleAddress = 0x031ECb63480983FD216D17BB6e1d393f3816b72F;
         CampMamoTShirt campMamoTShirt = new CampMamoTShirt(msg.sender, oracleAddress);
 
         vm.stopBroadcast();

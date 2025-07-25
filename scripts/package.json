@@ -1,0 +1,47 @@
+{
+  "name": "camp-mamo-scripts",
+  "version": "0.1.0",
+  "description": "Helper scripts for the Camp Mamo demo project",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/example.ts",
+    "build": "tsc",
+    "lint": "echo \"No linting configured\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "send-evm-tokens": "NODE_NO_WARNINGS=1 ts-node src/sendEvmTokens.ts",
+    "send-evm-tokens-cast": "NODE_NO_WARNINGS=1 ts-node src/sendEvmTokensCast.ts",
+    "send-evm-tokens-raw": "NODE_NO_WARNINGS=1 ts-node src/sendEvmTokensRaw.ts",
+    "convert-address": "NODE_NO_WARNINGS=1 ts-node src/convertAddress.ts",
+    "check-gas-token-balance": "NODE_NO_WARNINGS=1 ts-node src/checkGasTokenBalance.ts",
+    "check-node-balances": "NODE_NO_WARNINGS=1 ts-node src/checkNodeBalances.ts",
+    "fetch-balance": "NODE_NO_WARNINGS=1 ts-node src/fetchAccountBalance.ts",
+    "send-tia": "NODE_NO_WARNINGS=1 ts-node src/sendTia.ts",
+    "send-init": "NODE_NO_WARNINGS=1 ts-node src/sendInit.ts",
+    "send-tokens-to-gas-station": "NODE_NO_WARNINGS=1 ts-node src/sendTokensToGasStation.ts"
+  },
+  "keywords": [
+    "initia",
+    "camp-mamo",
+    "scripts",
+    "helpers"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@initia/initia.js": "^0.2.32",
+    "axios": "^1.6.2",
+    "bech32": "^2.0.0",
+    "bech32-converting": "^1.0.9",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.13.1",
+    "yargs": "^17.7.2",
+    "@cosmjs/proto-signing": "^0.32.3",
+    "@cosmjs/stargate": "^0.32.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/yargs": "^17.0.32",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
